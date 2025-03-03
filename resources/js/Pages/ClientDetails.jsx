@@ -9,14 +9,14 @@ export default function ClientDetails({
     return (
 
     <>
-        <div className="footer pt-5"> 
+        <div className="footer pt-5">
         <section>
 
-            <h4 className="text-black bg-green-500 font-semibold text-xl mt-5"> 
+            <h4 className="text-black bg-green-500 font-semibold text-xl mt-5">
                 Client's Details
-            </h4> 
-   
-            <ul className="flex flex-wrap items-center justify-start">
+            </h4>
+
+            <ul className="flex flex-wrap items-center justify-start mx-2">
                 <li> <span className="font-bold"> Client's name: </span> {clientName} </li>
                 <li> <span className="font-bold"> Client's address: </span> {clientAddress} </li>
                 <li> <span className="font-bold"> Driver's name: </span> {driverName} </li>
@@ -28,6 +28,6 @@ export default function ClientDetails({
         </div>
 
     </>
-        
+
     )
 }

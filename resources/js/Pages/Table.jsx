@@ -14,9 +14,6 @@ export default function Table({
 
 }) {
 
-    const numberFormat = (quantity, unitPrice, amount) =>
-        new Intl.NumberFormat('en-US', {}).format(quantity, unitPrice, amount);
-
     const amount = (quantity * unitPrice);
 
     return (
@@ -32,7 +29,6 @@ export default function Table({
                         <th className="font-bold"> Quantity </th>
                         <th className="font-bold"> Unit Price </th>
                         <th className="font-bold"> Amount </th>
-                        <th> Action </th>
                     </tr>
                  </thead>
 
@@ -43,19 +39,11 @@ export default function Table({
                  <tbody>
 
                     <tr className="items-center justify-center text-black p-1">
-                        <td className="font-bold" id="itemNo" name="itemNo"> {itemNo} </td>
-                        <td className="font-bold" id="description" name="description"> {description} </td>
-                        <td className="font-bold" id="quantity" name="quantity"> {quantity} </td>
-                        <td className="font-bold" id="unitPrice" name="unitPrice"> {unitPrice} </td>
-                        <td className="amount" id="amount" name="amount"> {amount} </td>
-
-                        <td>
-                        <div>
-                        <button className="readBtn Btn p-1"> View </button>
-                        <button className="editBtn Btn p-1"> Edit </button>
-                        <button className="deleteBtn Btn p-1"> Delete </button>
-                        </div>
-                        </td>
+                        <td id="itemNo" name="itemNo"> {itemNo} </td>
+                        <td id="description" name="description"> {description} </td>
+                        <td id="quantity" name="quantity"> {quantity} </td>
+                        <td id="unitPrice" name="unitPrice"> {unitPrice} </td>
+                        <td id="amount" name="amount"> {amount} </td>
 
                     </tr>
 
@@ -66,11 +54,10 @@ export default function Table({
 
                </table>
 
-            <div className="footer pt-10 px-3 flex flex-col items-end">
-
-                    <span className='font-semibold text-xl items-end'>
-                     Total Amount UGX:{totalAmount.toLocaleString()}/=
-                    </span>
+            <div className="footer text-black pt-5 px-3 flex flex-col items-end">
+                <span className='font-semibold text-xl items-end'>
+                  Total Amount UGX:{totalAmount.toLocaleString()}/=
+                </span>
             </div>
 
         </div>

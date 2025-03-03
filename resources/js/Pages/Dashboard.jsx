@@ -1,5 +1,6 @@
 import { useState } from 'react';
-
+import { FaPrint } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
 
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
@@ -56,15 +57,15 @@ export default function Dashboard() {
 
             header={
 
-                <div className="flex justify-center mb-1 leading-tight text-xl font-semibold text-black xl:flex-row xl:justify-between justify-between flex-wrap">
+                <div className="julius flex justify-center mb-1 leading-tight text-xl font-semibold text-white xl:flex-row xl:justify-between justify-between flex-wrap">
 
                    <div>
-                        <label className="font-bold uppercase tracking-wide text-3xl mb-1"> Invoicing App </label>
+                        <label className="font-bold uppercase text-white tracking-wide text-3xl mb-1"> Invoicing App </label>
                    </div>
 
                    <ul>
-                    <li> <button className='btn react-print-icon' onClick={handlePrint} > Print/ Download </button> </li>
-                    <li> <button> Save </button> </li>
+                    <button className='btn react-print-icon m-2' onClick={handlePrint} > <FaPrint /> </button>
+                    <button className='btn react-print-icon mx-2' onClick={handlePrint} > <FaFileDownload /> </button>
                    </ul>
 
                 </div>
@@ -74,12 +75,12 @@ export default function Dashboard() {
             <Head title="Dashboard" />
 
 
-         <main className="m-3 p-3 md:max-w-xl md:mx-auto lg:max-w-3xl xl:max-w-5xl bg-white-400 rounded shadow">
+         <main className="m-3 p-3 md:max-w-xl md:mx-auto lg:max-w-3xl xl:max-w-5xl rounded shadow">
 
 
         { showInvoice ? (
 
-      <div>
+      <div className='julius'>
            <Dates
            invoiceNo={invoiceNo}
            date={date}
@@ -171,7 +172,7 @@ export default function Dashboard() {
 
         */
 
-            <div className="flex flex-col justify-center">
+            <div className="julius flex flex-col justify-center">
 
             <article className='grid grid-cols-3 gap-10 mt-3'>
 
@@ -311,7 +312,7 @@ export default function Dashboard() {
 
             </article>
 
-            <article className="footer pt-2">
+            <article className="footer pt-2 mb-2">
                 <TableForm className="p-1 text-align-center"
                      itemNo ={itemNo}
                      setItemNo={setItemNo}

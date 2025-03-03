@@ -83,7 +83,7 @@ export default function TableForm({
         <form>
         <article className='mt-4 m-2 flex flex-wrap items-center justify-start text-align-center text-black px-5'>
 
-            <div className='flex flex-col p-1'>
+            <div className='flex flex-col p-1 mx-2'>
             <label className="p-1" htmlFor='itemNo'> <span> ItemNo </span> </label>
             <input className="p-1 mx-2" type='integer' name='itemNo' id='itemNo'
             placeholder='Enter Item No' autoComplete='off'
@@ -92,7 +92,7 @@ export default function TableForm({
             />
             </div>
 
-            <div className='flex flex-col p-1'>
+            <div className='flex flex-col p-1 mx-2'>
             <label className="p-1" htmlFor='description'> <span> Description </span> </label>
             <input className="p-1 mx-2" type='text' name='description' id='description'
             placeholder='Enter Product Description' autoComplete='off'
@@ -101,7 +101,7 @@ export default function TableForm({
             />
             </div>
 
-            <div className='flex flex-col p-1'>
+            <div className='flex flex-col p-1 mx-2'>
             <label className="p-1" htmlFor='quantity'> <span> Quantity </span> </label>
             <input className="p-1 mx-2" type='integer' name='quantity' id='quantity'
             placeholder='Enter Quantity' autoComplete='off'
@@ -110,7 +110,7 @@ export default function TableForm({
             />
             </div>
 
-            <div className='flex flex-col p-1'>
+            <div className='flex flex-col p-1 mx-2'>
             <label className="p-1" htmlFor='unitPrice'> <span> Unit Price </span> </label>
             <input className="p-1 mx-2" type='currency' name='unitPrice' id='unitPrice'
             placeholder='Enter unit price' autoComplete='off'
@@ -119,11 +119,11 @@ export default function TableForm({
             />
             </div>
 
-            <div className='flex flex-col p-1'>
+            <div className='flex flex-col p-1 mx-2'>
 
             <label className="p-1" htmlFor='amount'> <span> Amount (UGX) </span> </label>
 
-            <p className="p-1 mx-2 justify-end" type='currency' name='amount' id='amount'
+            <p className="p-1 mx-4 justify-end" type='currency' name='amount' id='amount'
               value={amount}
               onChange={(e) => setAmount(e.target.value)}>
             {amount}
@@ -132,7 +132,7 @@ export default function TableForm({
 
             </div>
 
-          <button type='submit' onClick={handleSubmit} className='mt-2 mx-10 bg-blue-500 text-white font-bold py-2 px-8
+          <button type='submit' onClick={handleSubmit} className='mt-2 mx-10 p-1 bg-blue-500 text-white font-bold py-2 px-8
             rounded shadow border-2 border-blue-500 hover:bg-transparent
             hover:text-blue-500 transition-all duration-300 flex flex-col p-1'>
               {isEditing ? "Editing Row Item" : "Add Table Item"}
@@ -166,10 +166,10 @@ export default function TableForm({
                  <tbody>
 
                     <tr className="items-center justify-center text-black p-1">
-                        <td className="font-bold" id="itemNo" name="itemNo"> {itemNo} </td>
-                        <td className="font-bold" id="description" name="description"> {description} </td>
-                        <td className="font-bold" id="quantity" name="quantity"> {quantity} </td>
-                        <td className="font-bold" id="unitPrice" name="unitPrice"> {unitPrice} </td>
+                        <td id="itemNo" name="itemNo"> {itemNo} </td>
+                        <td id="description" name="description"> {description} </td>
+                        <td id="quantity" name="quantity"> {quantity} </td>
+                        <td id="unitPrice" name="unitPrice"> {unitPrice} </td>
                         <td className="amount" id="amount" name="amount"> {amount} </td>
 
                         <td>
@@ -188,7 +188,7 @@ export default function TableForm({
 
           </table>
 
-          <div className="footer pt-10 px-3 flex flex-col items-end">
+          <div className="footer pt-6 px-3 flex flex-col items-end">
 
             <span className='font-semibold text-xl items-end'>
              Total Amount UGX:{totalAmount.toLocaleString()}/=
